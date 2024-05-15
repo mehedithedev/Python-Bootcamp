@@ -1,4 +1,11 @@
-x = 1
-while x <= 10:
-    print(x)
-    x = x+1
+country = "Namaste"
+
+match country:
+
+    case "USA":
+        print("Hello")
+    case "Namaste":
+        print("Namaste")
+    case "Germany":
+        print("Hallo")
+

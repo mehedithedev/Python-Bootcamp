@@ -5,11 +5,12 @@ while True:
 
     match userInput:
         case "add":
-            todo = input("Enter a todo item: ")
+            todo = input("Enter a todo item: ").strip()
             todos.append(todo)
         case "show":
             for item in todos:
                 print(item)
         case "exit":
             break
-
+        case _:
+            print("Try again !")
