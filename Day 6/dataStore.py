@@ -20,9 +20,14 @@ while True:
             todos = file.readlines()
             file.close()
 
-            for i, item in enumerate(todos):
+
+            new_todos = []
+            for item in todos:
+                new_item = item.strip('\n')
+                new_todos.append(new_item)
+
+            for i, item in enumerate(new_todos):
                 print(f"{i+1} - {item}")
-                print(f"Your todo has {todos.__len__()} items")
 
 
         case "edit":
