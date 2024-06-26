@@ -2,10 +2,6 @@ import streamlit as st
 import pandas
 # Set page layout to wide
 st.set_page_config(layout="wide")
-
-
-
-
 st.header("The best company")
 st.write("""
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
@@ -17,13 +13,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 """)
 st.subheader("Our Team")
-
-
 col1, col2, col3 = st.columns(3)
-
-df = pandas.read_csv("data.csv")  # by default each data is divided by , 
-
-
+df = pandas.read_csv("data.csv")  # by default each data is divided by ,
 with col1:
     for i, r in df[:4].iterrows():
         name = f"{r['first name']} {r['last name']}"
