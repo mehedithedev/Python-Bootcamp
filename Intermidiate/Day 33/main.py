@@ -34,8 +34,6 @@ if place:
             sky_conditions = [dict["weather"][0]['main'] for dict in filtered_data]
 
             image_paths = [images[condition] for condition in sky_conditions]
-            print(sky_conditions)
-            print(image_paths)
             st.image(image_paths, width=115)
             
     except TypeError:
