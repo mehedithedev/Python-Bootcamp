@@ -1,13 +1,16 @@
 import requests
 from send_email import send_email
 
-topic = "openai"
+topic = "apple"
 api_key = "872a2184158643219aee2679e6484bdd"
 url = (f"https://newsapi.org/v2/everything?"
        f"q={topic}"
        f"&sortBy=publishedAt"
        f"&language=en"
        f"&apiKey={api_key}")
+
+
+gen_url = "https://newsapi.org/v2/everything?q={apple}&sortBy=publishedAt&language=en&apiKey=872a2184158643219aee2679e6484bdd"
 
 # Make request
 r = requests.get(url)
@@ -35,3 +38,11 @@ if 'articles' in content:
     send_email(body)
 else:
     print("No articles found in the response.")
+
+
+
+# I want to print the content of the response when I execute this main.py file
+
+# Show me the code
+
+# __name__ == "__main__" and print(body)
